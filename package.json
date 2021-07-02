@@ -6,7 +6,7 @@
   "email" : "asapdotid@gmail.com",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/asapdotid/nuxt-basic-spa-v2-bootstrap"
+    "url": "https://gitlab.com/asap-labs/nuxtjs-spa-bootstrap"
   },
   "scripts": {
     "test": "jest",
