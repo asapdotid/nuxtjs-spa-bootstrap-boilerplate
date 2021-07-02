@@ -150,7 +150,7 @@ PM2 ecosystem config `ecosystem.config.js`:
 module.exports = {
   apps: [
     {
-      name: 'hotel-dashboard-staging-app',
+      name: 'staging-app',
       exec_mode: 'cluster',
       instances: 2,
       script: 'nuxt-start',
@@ -165,7 +165,7 @@ module.exports = {
       },
     },
     {
-      name: 'hotel-dashboard-production-app',
+      name: 'production-app',
       exec_mode: 'cluster',
       instances: 2,
       script: 'nuxt-start',
@@ -195,15 +195,15 @@ Finally modify `package.json` script:
     "start:dev": "nuxt start --dotenv .env.development",
     "generate:dev": "nuxt generate --dotenv .env.development",
     "build:staging": "yarn clean && nuxt build --dotenv .env.staging",
-    "start:staging": "pm2 start ecosystem.config.js --only hotel-dashboard-staging-app",
-    "reload:staging": "pm2 reload ecosystem.config.js --only hotel-dashboard-staging-app",
-    "stop:staging": "pm2 stop ecosystem.config.js --only hotel-dashboard-staging-app",
-    "delete:staging": "yarn stop:staging && pm2 delete ecosystem.config.js --only hotel-dashboard-staging-app",
+    "start:staging": "pm2 start ecosystem.config.js --only staging-app",
+    "reload:staging": "pm2 reload ecosystem.config.js --only staging-app",
+    "stop:staging": "pm2 stop ecosystem.config.js --only staging-app",
+    "delete:staging": "yarn stop:staging && pm2 delete ecosystem.config.js --only staging-app",
     "build:production": "yarn clean && nuxt build --dotenv .env.production",
-    "start:production": "pm2 start ecosystem.config.js --only hotel-dashboard-production-app",
-    "reload:production": "pm2 reload ecosystem.config.js --only hotel-dashboard-production-app",
-    "stop:production": "pm2 stop ecosystem.config.js --only hotel-dashboard-production-app",
-    "delete:production": "yarn stop:production && pm2 delete ecosystem.config.js --only hotel-dashboard-production-app"
+    "start:production": "pm2 start ecosystem.config.js --only production-app",
+    "reload:production": "pm2 reload ecosystem.config.js --only production-app",
+    "stop:production": "pm2 stop ecosystem.config.js --only production-app",
+    "delete:production": "yarn stop:production && pm2 delete ecosystem.config.js --only production-app"
 },
 ```
 
