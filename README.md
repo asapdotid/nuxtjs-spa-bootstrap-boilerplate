@@ -88,6 +88,7 @@ How to use on Nuxt Config `(nuxt.config.js)`, like use dotenv module:
       baseURL: `${process.env.API_URL}`,
     },
   },
+```
 
 How to use on part of _**Nuxt/Vue files**_ with **Public Runtime Config** or **Private Runtime Config** in `nuxt.config.js`
 
