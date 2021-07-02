@@ -85,8 +85,14 @@
             ></button>
           </div>
           <div class="modal-body">
-            Sample modal from Bootstrap 5 with
-            <font-awesome-icon :icon="['fas', 'heart']" />
+            <div class="links">
+              <div>
+                <h3>Mountaiins (Sample from NuxtJs Dev API)</h3>
+                <ul v-for="mountain in mountains" :key="mountain.slug">
+                  <li>{{ mountain.title }}</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="modal-footer">
             <button
@@ -105,7 +111,12 @@
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $axios, $config }) {
+    const mountains = await $axios.$get(`/mountains`)
+    return { mountains }
+  },
+}
 </script>
 
 <style></style>

@@ -70,6 +70,8 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
+    https: `${process.env.NODE_ENV}` !== 'development',
+    baseURL: `${process.env.API_URL}`,
   },
 
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-runtime-config/
@@ -78,12 +80,7 @@ export default {
   },
 
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-runtime-config/
-  privateRuntimeConfig: {
-    axios: {
-      https: `${process.env.NODE_ENV}` !== 'development',
-      baseURL: `${process.env.API_URL}`,
-    },
-  },
+  privateRuntimeConfig: {},
 
   // Style Resource module configuration
   styleResources: {

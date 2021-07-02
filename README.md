@@ -68,6 +68,11 @@ How to use on Nuxt Config `(nuxt.config.js)`, like use dotenv module:
 
 ```bash
 ...
+  axios: {
+    https: `${process.env.NODE_ENV}` !== 'development',
+    baseURL: `${process.env.API_URL}`,
+  },
+
   server: {
     host: `${process.env.SERVER_HOST}`, // default: localhost
     port: process.env.SERVER_PORT, // default: 3000
@@ -83,10 +88,6 @@ How to use on Nuxt Config `(nuxt.config.js)`, like use dotenv module:
   },
 
   privateRuntimeConfig: {
-    axios: {
-      https: `${process.env.NODE_ENV}` !== 'development',
-      baseURL: `${process.env.API_URL}`,
-    },
   },
 ```
 
