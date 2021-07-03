@@ -1,4 +1,4 @@
-# Nuxt JS Boilerplate Application for Version `2.*.*` + Boostrap CSS `5`
+# Nuxt JS SPA Boilerplate Application for Version `2.*.*` + Boostrap CSS `5`
 
 Setup boilerplate application for development, staging and production with some modules:
 
